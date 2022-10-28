@@ -25,6 +25,7 @@ function unpdateCountdown() {
 const notif = document.getElementById('notif');
 const selectKota = document.getElementById('kota');
 const selectJam = document.getElementById('jam');
+const selectOrder = document.getElementById('order');
 
 const kota = [
   'Batu',
@@ -46,7 +47,7 @@ const kota = [
 
 const jam = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-setInterval(setNotif, 5000);
+setInterval(setNotif, 10000);
 
 function setNotif() {
   var randomKota = kota[Math.floor(Math.random() * kota.length)];
@@ -54,6 +55,7 @@ function setNotif() {
 
   selectKota.innerHTML = `Seseorang dari ${randomKota}`;
   selectJam.innerHTML = `${randomjam} jam yang lalu`;
+  selectOrder.innerHTML = `Baru Saja Melakukan Order`;
 
   notif.classList.toggle('hidden');
 }
